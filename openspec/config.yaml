@@ -1,0 +1,21 @@
+schema: spec-driven
+context: |
+  Project: Sistema de Gestión de Reservas de Espacios Académicos
+  Tech stack: Python 3.11, FastAPI, PostgreSQL 16, Redis 7, SQLAlchemy 2, Alembic, JWT (python-jose), bcrypt
+  API style: RESTful, JSON responses, HTTP status codes estándar
+  Auth: JWT Bearer tokens (access 15 min + refresh 7 days en Redis)
+  Roles: STUDENT, TEACHER, SPACE_ADMIN, SYS_ADMIN
+  Timezone: UTC en BD, conversión en presentación
+  Max reservation duration: 4 horas consecutivas (regla institucional)
+rules:
+  proposal:
+    - Describir motivación del cambio y módulos afectados.
+    - Referenciar el requisito del PLAN_INGENIERIA.md correspondiente.
+  specs:
+    - Usar formato EARS para requisitos (SHALL, MUST, SHOULD).
+    - Usar formato BDD para escenarios (GIVEN / WHEN / THEN).
+    - Cada requisito debe tener al menos un escenario de aceptación.
+    - Los errores deben especificar el HTTP status code y el mensaje.
+  tasks:
+    - Usar checkboxes markdown.
+    - Ordenar por dependencia (primero modelos, luego servicios, luego routers).
